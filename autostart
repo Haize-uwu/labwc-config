@@ -1,0 +1,17 @@
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 >/dev/null 2>&1 &
+
+systemctl --user enable --now emacs >/dev/null 2>&1 &
+nm-applet --indicator >/dev/null 2>&1 &
+blueman-applet >/dev/null 2>&1 &
+
+swaybg -m -fill -i $HOME/Pictures/wallhaven-m3m7p8_1920x1200.png >/dev/null 2>&1 &
+
+systemctl --user enable opentabletdriver --now >/dev/null 2>&1 &
+
+dunst >/dev/null 2>&1 &
+
+waybar >/dev/null 2>&1 &
+
+redshift >/dev/null 2>&1 &
+
+swayidle -w timeout 1200 'swaylock -f -c 111111' timeout 1200 '' resume '' before-sleep 'swaylock -f -c 111111' >/dev/null 2>&1 &
